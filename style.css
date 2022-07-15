@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(210, 46%, 95%);
+  font-family: "Manrope", sans-serif;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.container-card {
+  position: relative;
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 20vh;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 2px 12px 10px 0 hsla(212, 23%, 69%, 0.199);
+}
+.card {
+  display: flex;
+  justify-content: space-between;
+}
+.image {
+  position: relative;
+  height: 100%;
+  width: 300px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.text-section {
+  position: relative;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.text-section h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+  margin: 0;
+}
+.text-section p {
+  font-size: 13px;
+  color: hsl(212, 23%, 69%);
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info button {
+  position: relative;
+  left: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  background-color: hsl(210, 46%, 95%);
+  border: 0;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.profile-text {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-items: center;
+  padding: 0.5rem;
+}
+
+.profile-text p {
+  color: hsl(212, 23%, 69%);
+  position: relative;
+  font-size: 13px;
+  margin: 0;
+}
+
+.profile-text h3 {
+  color: hsl(217, 19%, 35%);
+  position: relative;
+  font-size: 13px;
+  margin: 0;
+}
+
+.share {
+  position: absolute;
+  width: 240px;
+  height: 40px;
+  top: 75%;
+  left: 85%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: hsl(217, 19%, 35%);
+  align-items: center;
+  padding: 0.2rem;
+  border-radius: 10px;
+  transition: 300ms ease-out;
+  visibility: hidden;
+}
+
+.share p {
+  margin: 0;
+  color: #fff;
+}
+
+.share:hover > p {
+  color: hsl(214, 17%, 51%);
+  transition-duration: 0.5s;
+}
+
+.face:hover {
+  transform: scale(1.2);
+}
+.twit:hover {
+  transform: scale(1.2);
+}
+.pint:hover {
+  transform: scale(1.2);
+}
+
+.share-icon-grey {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  background-color: hsl(210, 46%, 95%);
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.share-icon-grey:hover .share {
+  visibility: visible;
+  transform: translateY(-40px);
+  opacity: 1;
+}
+
+@media (max-width: 500px) {
+  .container-card {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20vh;
+    background: #fff;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 2px 12px 10px 0 hsla(212, 23%, 69%, 0.199);
+  }
+
+  .text-section h1 {
+    margin-bottom: 0.5rem;
+  }
+  .text-section p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    text-align: justify;
+  }
+
+  .image {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .profile-text {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-items: center;
+  }
+
+  .profile-text p {
+    color: hsl(212, 23%, 69%);
+    position: relative;
+    font-size: 13px;
+    margin: 0;
+  }
+
+  .profile-text h3 {
+    color: hsl(217, 19%, 35%);
+    position: relative;
+    font-size: 13px;
+    margin: 0;
+  }
+
+  .share {
+    width: 100%;
+    visibility: visible;
+    top: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: hsl(217, 19%, 35%);
+    align-items: center;
+    padding: 0.2rem;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .share-icon-grey:hover .share {
+    visibility: visible;
+    transform: none !important;
+    opacity: 1;
+  }
+
+  .share-icon-grey {
+    visibility: hidden;
+  }
+  .share p {
+    margin: 0;
+  }
+
+  .share-icon-grey:hover .share {
+    visibility: visible;
+    opacity: 1;
+  }
+}
